@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 BASE_DIR=$PWD
 
-## Find those files that are older than a month
+## Find files
 find "$BASE_DIR" -maxdepth 1  -type f |
  while IFS= read -r file; do
     ## Get the file's modification year
@@ -13,8 +13,8 @@ find "$BASE_DIR" -maxdepth 1  -type f |
     ## Create the directories if they don't exist. The -p flag
     ## makes 'mkdir' create the parent directories as needed so
     ## you don't need to create $year explicitly.
-    [[ ! -d "$BASE_DIR/$month/$day/$hour" ]] && mkdir -p "$BASE_DIR/$year/$month";
+    [[ ! -d "$BASE_DIR/20$year/$month" ]] && mkdir -p "$BASE_DIR/20$year/$month";
 
     ## Move the file
-    mv "$file" "$BASE_DIR/$year/$month/"
+    mv "$file" "$BASE_DIR/20$year/$month/"
 done
