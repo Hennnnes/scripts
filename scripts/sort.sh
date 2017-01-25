@@ -18,3 +18,18 @@ find "$BASE_DIR" -maxdepth 1  -type f |
     ## Move the file
     mv "$file" "$BASE_DIR/20$year/$month/"
 done
+
+echo "Files sorted";
+mv 01/ jan/;
+mv 02/ feb/;
+mv 03/ mar/;
+mv 04/ apr/;
+mv 05/ may/;
+mv 06/ june/;
+mv 07/ july/;
+mv 08/ aug/;
+mv 09/ sept/;
+mv 10/ oct/;
+mv 11/ nov/;
+mv 12/ dec/;
+echo "renamed Folders to months";
